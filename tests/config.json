@@ -1,0 +1,67 @@
+{
+    "output_files": [
+        {
+            "name": "radiomics_results",
+            "required": true,
+            "allow_multiple": false,
+            "file": {
+                "file_type": "CSV",
+                "data_type": "machine_learning_features",
+                "file_path": "/home/user/vre_radiomics_tool/tests/run000/radiomics_results.csv",
+                "sources": ""
+            }
+        }
+    ],
+    "input_files": [
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503905",
+            "required": true,
+            "allow_multiple": true,
+            "name": "images"
+        },
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503906",
+            "required": true,
+            "allow_multiple": true,
+            "name": "images"
+        },
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503907",
+            "required": true,
+            "allow_multiple": true,
+            "name": "images"
+        },
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503908",
+            "required": true,
+            "allow_multiple": true,
+            "name": "masks"
+        },
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503909",
+            "required": true,
+            "allow_multiple": true,
+            "name": "masks"
+        },
+        {
+            "value": "unique_file_id_5e14abe0a37012.29503910",
+            "required": true,
+            "allow_multiple": true,
+            "name": "masks"
+        }
+    ],
+    "arguments": [
+        {
+            "value": "/home/user/vre_radiomics_tool/tests/run000",
+            "name": "execution"
+        },
+        {
+            "value": "my_project_id",
+            "name": "project"
+        },
+        {
+            "value": "30",
+            "name": "bin_width"
+        }
+    ]
+}

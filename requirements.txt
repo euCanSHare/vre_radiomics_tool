@@ -1,0 +1,5 @@
+scikit-image
+numpy
+nibabel
+pandas
+pyradiomics==2.2.0

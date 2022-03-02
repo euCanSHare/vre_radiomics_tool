@@ -1,0 +1,28 @@
+{
+    "output_files": [
+        {
+            "name": "radiomics_results",
+            "file_path": "/home/user/vre_radiomics_tool/tests/run000/radiomic_features.csv",
+            "data_type": "machine_learning_features",
+            "file_type": "CSV",
+            "meta_data": {
+                "sources": {
+                    "images": [
+                        "/home/user/vre_radiomics_tool/data/mic/training2/img/patient001_4d.nii.gz",
+                        "/home/user/vre_radiomics_tool/data/mic/training2/img/patient002_4d.nii.gz",
+                        "/home/user/vre_radiomics_tool/data/mic/training2/img/patient003_4d.nii.gz"
+                    ],
+                    "masks": [
+                        "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient001_4d_label.nii.gz",
+                        "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient002_4d_label.nii.gz",
+                        "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient003_4d_label.nii.gz"
+                    ]
+                },
+                "bin_width": 30,
+                "pyradiomics_version": "v3.0.1",
+                "normalize": false
+            },
+            "sources": []
+        }
+    ]
+}
