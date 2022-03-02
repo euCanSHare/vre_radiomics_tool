@@ -83,26 +83,13 @@ class RAD_RUNNER(Tool):
             logger.debug("Execution path: {}".format(execution_path))
 
             logger.debug("Init execution of the Segmentation")
-            # Prepare file paths
-            print('====>', input_files)
-            print('====>', input_metadata)
-            print('====>', output_files)
-            # for key in input_files.keys():
-            #     if key == 'model':
-            #         model = input_files[key]
-            #     elif key == 'images':
-            #         datasets = input_files[key]
-            #     else:
-            #         logger.debug('Unrecognized key {}'.format(key))
-            #         continue
 
             # Extract radiomics
-            # output_filepath = extract(
-            #     input_files['images'], input_files['masks'],
-            #     output_path=input_metadata['output_folder'],
-            #     bin_width=input_metadata['bin_width'], normalize=False)
+            output_filepath = extract(
+                input_files['images'], input_files['masks'],
+                output_path=input_metadata['output_folder'],
+                bin_width=input_metadata['bin_width'], normalize=False)
 
-            output_filepath = '/home/vec/Desktop/euCanSHare/VRE/vre_radiomics_tool/tests/run000/radiomic_features.csv'
             # Generate metadata for output files
             output_files = [{
                 'name': 'radiomics_results',
