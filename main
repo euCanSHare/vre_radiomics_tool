@@ -13,6 +13,6 @@ esac
 
 PROGNAME="$(basename "$0")"
 
-# source "${BASEDIR}"/env/bin/activate
+source "${BASEDIR}"/env/bin/activate
 exec python -u "${BASEDIR}"/"${PROGNAME}".py "$@"
 exit 1
