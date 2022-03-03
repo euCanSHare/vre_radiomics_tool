@@ -98,11 +98,11 @@ class JSONApp(WorkflowApp):  # pylint: disable=too-few-public-methods
         # -------------------
         input_metadata['output_folder'] = arguments['execution']
         try:
-            input_metadata['bin_width'] = int(arguments['bin_width'])
+            input_metadata['bin_width'] = int(arguments['bin_width '])
         except:
-            print('''WARNING: Could not understand bin width "{}". Please,
+            print('''WARNING: Could not understand bin width. Please,
                   provide a valid integer. Setting a default bin width of
-                  25.'''.format(arguments['bin_width']))
+                  25.''')
             input_metadata['bin_width'] = 25
         # Get label names and ED and ES positions, if available
         label_names = []

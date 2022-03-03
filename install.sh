@@ -8,4 +8,4 @@ python3 -m venv env
 # Activate virtual environment
 source env/bin/activate
 # Install requirements
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
