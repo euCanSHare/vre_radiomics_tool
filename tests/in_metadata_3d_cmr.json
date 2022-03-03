@@ -1,0 +1,52 @@
+[
+    {
+        "_id": "unique_file_id_5e14abe0a37012.29503908",
+        "file_path": "/home/user/vre_radiomics_tool/data/mic/training/img/patient001/patient001_frame01.nii.gz",
+        "file_type": "NIFTI",
+        "data_type": "bioimage",
+        "compressed": "GZ",
+        "user_id": "user_id",
+        "creation_time": {
+            "sec": 1578413024,
+            "usec": 0
+        },
+        "meta_data": {
+            "type": "file",
+            "size": 0,
+            "project": "my_project_id",
+            "atime": {
+                "sec": 1578413024,
+                "usec": 0
+            },
+            "parentDir": "unique_file_id_5e14abe0a37742.64003100",
+            "lastAccess": {
+                "sec": 1578413024,
+                "usec": 0
+            }
+        },
+        "sources": []
+    },
+	{
+        "_id": "unique_file_id_5e14abe0a37012.29503912",
+        "file_path": "/home/user/vre_radiomics_tool/data/mic/training/msk/patient001/patient001_frame01_label.nii.gz",
+        "file_type": "NIFTI",
+        "data_type": "image_mask",
+        "compressed": "GZ",
+        "user_id": "user_id",
+        "creation_time": {
+            "sec": 1578413024,
+            "usec": 0
+        },
+        "meta_data": {
+            "labels": {
+                "lv": 1, "myo": 2, "rv": 3
+            },
+            "parentDir": "unique_file_id_5e14abe0a37742.64003100",
+            "lastAccess": {
+                "sec": 1578413024,
+                "usec": 0
+            }
+        },
+        "sources": []
+    }
+]

@@ -25,3 +25,7 @@ echo "--- Test execution: $WORKING_DIR"
 echo "--- Start time: `date`"
 
 time $TOOL_EXECUTABLE --config $TEST_DATA_DIR/config.json --in_metadata $TEST_DATA_DIR/in_metadata.json --out_metadata $WORKING_DIR/out_metadata.json # > $WORKING_DIR/tool.log
+
+time $TOOL_EXECUTABLE --config $TEST_DATA_DIR/config_3d_cmr.json --in_metadata $TEST_DATA_DIR/in_metadata_3d_cmr.json --out_metadata $WORKING_DIR/out_metadata_3d_cmr.json # > $WORKING_DIR/tool.log
+
+time $TOOL_EXECUTABLE --config $TEST_DATA_DIR/config_3d_breast.json --in_metadata $TEST_DATA_DIR/in_metadata_3d_breast.json --out_metadata $WORKING_DIR/out_metadata_3d_breast.json # > $WORKING_DIR/tool.log

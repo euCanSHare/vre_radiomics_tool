@@ -14,25 +14,13 @@
     ],
     "input_files": [
         {
-            "value": "unique_file_id_5e14abe0a37012.29503905",
+            "value": "unique_file_id_5e14abe0a37012.29503908",
             "required": true,
             "allow_multiple": true,
             "name": "images"
         },
         {
-            "value": "unique_file_id_5e14abe0a37012.29503906",
-            "required": true,
-            "allow_multiple": true,
-            "name": "images"
-        },
-        {
-            "value": "unique_file_id_5e14abe0a37012.29503909",
-            "required": true,
-            "allow_multiple": true,
-            "name": "masks"
-        },
-        {
-            "value": "unique_file_id_5e14abe0a37012.29503910",
+            "value": "unique_file_id_5e14abe0a37012.29503912",
             "required": true,
             "allow_multiple": true,
             "name": "masks"

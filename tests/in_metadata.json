@@ -54,34 +54,7 @@
         "sources": []
     },
     {
-        "_id": "unique_file_id_5e14abe0a37012.29503907",
-        "file_path": "/home/user/vre_radiomics_tool/data/mic/training2/img/patient003_4d.nii.gz",
-        "file_type": "NIFTI",
-        "data_type": "bioimage",
-        "compressed": "GZ",
-        "user_id": "user_id",
-        "creation_time": {
-            "sec": 1578413024,
-            "usec": 0
-        },
-        "meta_data": {
-            "type": "file",
-            "size": 0,
-            "project": "my_project_id",
-            "atime": {
-                "sec": 1578413024,
-                "usec": 0
-            },
-            "parentDir": "unique_file_id_5e14abe0a37742.64003100",
-            "lastAccess": {
-                "sec": 1578413024,
-                "usec": 0
-            }
-        },
-        "sources": []
-    },
-    {
-        "_id": "unique_file_id_5e14abe0a37012.29503908",
+        "_id": "unique_file_id_5e14abe0a37012.29503909",
         "file_path": "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient001_4d_label.nii.gz",
         "file_type": "NIFTI",
         "data_type": "image_mask",
@@ -108,7 +81,7 @@
         "sources": []
     },
     {
-        "_id": "unique_file_id_5e14abe0a37012.29503909",
+        "_id": "unique_file_id_5e14abe0a37012.29503910",
         "file_path": "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient002_4d_label.nii.gz",
         "file_type": "NIFTI",
         "data_type": "image_mask",
@@ -126,59 +99,6 @@
             },
             "ED": 0,
             "ES": 13,
-            "parentDir": "unique_file_id_5e14abe0a37742.64003100",
-            "lastAccess": {
-                "sec": 1578413024,
-                "usec": 0
-            }
-        },
-        "sources": []
-    },
-    {
-        "_id": "unique_file_id_5e14abe0a37012.29503910",
-        "file_path": "/home/user/vre_radiomics_tool/data/mic/training2/msk/patient003_4d_label.nii.gz",
-        "file_type": "NIFTI",
-        "data_type": "image_mask",
-        "compressed": "GZ",
-        "user_id": "user_id",
-        "creation_time": {
-            "sec": 1578413024,
-            "usec": 0
-        },
-        "meta_data": {
-            "labels": {
-                "lv": 1,
-                "myo": 2,
-                "rv": 3
-            },
-            "ED": "",
-            "ES": "",
-            "parentDir": "unique_file_id_5e14abe0a37742.64003100",
-            "lastAccess": {
-                "sec": 1578413024,
-                "usec": 0
-            }
-        },
-        "sources": []
-    },
-    {
-        "_id": "unique_file_id_5e14abe0a37012.29503911",
-        "file_path": "/home/user/vre_radiomics_tool/data/mic/training2/metadata.csv",
-        "file_type": "CSV",
-        "data_type": "parameter_file",
-        "user_id": "user_id",
-        "creation_time": {
-            "sec": 1578413024,
-            "usec": 0
-        },
-        "meta_data": {
-            "type": "file",
-            "size": 0,
-            "project": "my_project_id",
-            "atime": {
-                "sec": 1578413024,
-                "usec": 0
-            },
             "parentDir": "unique_file_id_5e14abe0a37742.64003100",
             "lastAccess": {
                 "sec": 1578413024,
