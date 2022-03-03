@@ -87,6 +87,8 @@ class RAD_RUNNER(Tool):
             # Extract radiomics
             output_filepath = extract(
                 input_files['images'], input_files['masks'],
+                label_names=input_metadata['label_names'],
+                slices_of_interest=input_metadata['slicing_points'],
                 output_path=input_metadata['output_folder'],
                 bin_width=input_metadata['bin_width'], normalize=False)
 

@@ -47,10 +47,21 @@ def extract_features(tmppath, i, j, colsn, name, slc, mask, labels, bin_width, n
     print('Slice {0:03d} - Time {1:.2f} s'.format(j, time_end - time_start))
 
 
-def extract(images, masks, output_path, bin_width=25, normalize=False):
+def extract(
+    images, masks, label_names, slices_of_interest,
+    output_path, bin_width=25, normalize=False):
     '''
     Extract radiomics features from a set of images
-    TODO: Adapt script for an option with 4D masks.
+    Params:
+        images: list of image filenames
+        masks: list of mask filenames
+        label_names: list of dicts with integer to string information of labels
+            (e.g., [{1: 'lv'}, ...])
+        slices_of_interest: list of tuples with slices of interest for feature extraction
+            (e.g., [(0, 20), ...])
+        output_path: path where final csv will be saved
+        bin_width: width of bins used for the binarization of intensity values
+        normalize: whether or not to normalize the images (Z-score -- N(0,1)).
     '''
     # ------------------
     # 1) Load settings for feature extractor and prepare variables
@@ -117,10 +128,15 @@ def extract(images, masks, output_path, bin_width=25, normalize=False):
     for i, image in enumerate(images):
         nii = nib.load(image)
         slc_num = 1 if len(nii.shape) == 3 else nii.shape[-1]
+        # Set slices of interest. Default is all slices.
+        soi = slices_of_interest[i]
+        slc_selected = soi if soi is not None else range(slc_num)
 
         # Iterate over each temporal slice in case it is available
         for j in range(slc_num):
             if slc_num > 1:
+                # Skip if slice is not among selected slices
+                if j not in slc_selected: continue
                 auxim = nii.slicer[...,j].get_fdata()
                 slc = sitk.GetImageFromArray(auxim)
             else:

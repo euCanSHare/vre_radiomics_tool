@@ -91,9 +91,11 @@ class JSONApp(WorkflowApp):  # pylint: disable=too-few-public-methods
             if isinstance(input_id, (list, tuple)):  # check allow_multiple?
                 input_metadata[role] = [input_metadata_ids[el] for el in input_id]
             else:
-                input_metadata[role] = input_metadata_ids[input_id]
+                input_metadata[role] = [input_metadata_ids[input_id]]
 
-        # Output folder
+        # -------------------
+        # Metadata keys to use in the VRE runner
+        # -------------------
         input_metadata['output_folder'] = arguments['execution']
         try:
             input_metadata['bin_width'] = int(arguments['bin_width'])
@@ -102,13 +104,36 @@ class JSONApp(WorkflowApp):  # pylint: disable=too-few-public-methods
                   provide a valid integer. Setting a default bin width of
                   25.'''.format(arguments['bin_width']))
             input_metadata['bin_width'] = 25
+        # Get label names and ED and ES positions, if available
+        label_names = []
+        slicing_points = []
+        for metadata in input_metadata['masks']:
+            md = metadata.meta_data
+            # Inverted dict. E.g., {1: 'LV'}
+            try:
+                l = {v: k for k, v in md['labels'].items()}
+                label_names.append(l)
+            except Exception:
+                label_names.append(None)
+            # Points in the volume for radiomic extraction
+            try:
+                ed = int(md['ED'])
+                es = int(md['ES'])
+                slicing_points.append((ed, es))
+            except Exception:
+                slicing_points.append(None)
+
+        input_metadata['label_names'] = label_names
+        input_metadata['slicing_points'] = slicing_points
 
         # get paths from IDs
         input_files = {}
         for role, metadata in input_metadata.items():
-            if isinstance(metadata, (list, tuple)):  # check allow_multiple?
+            print(role, metadata)
+            if role in ['images', 'masks']:
                 input_files[role] = [el.file_path for el in metadata]
-            elif isinstance(role, str):
+            elif role in ['output_folder', 'bin_width', 'label_names', 'slicing_points']:
+                # Ignore keys introduced in the previous step
                 continue
             else:
                 input_files[role] = metadata.file_path
@@ -223,8 +248,6 @@ class JSONApp(WorkflowApp):  # pylint: disable=too-few-public-methods
             role = ofile["name"]
             path = ofile["file_path"]
             metadata = output_metadata["output_files"][idx]
-            print('----> role, path', role, path)
-            print('---> metadata', metadata)
             if isinstance(path, (list, tuple)):  # check allow_multiple?
                 assert (
                     isinstance(metadata, (list, tuple)) and
