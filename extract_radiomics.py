@@ -9,6 +9,15 @@ import SimpleITK as sitk
 
 from radiomics import featureextractor
 
+# ------ remove warning log from GLCM features computation ------
+import logging
+# set level for all classes
+logger = logging.getLogger("radiomics")
+logger.setLevel(logging.ERROR)
+# ... or set level for specific class
+# logger = logging.getLogger("radiomics.glcm")
+# logger.setLevel(logging.ERROR)
+# -----------------------------
 
 
 def extract_features(tmppath, i, j, colsn, name, slc, mask, labels, bin_width, normalize, params):
